@@ -1,0 +1,86 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat';
+
+
+html {
+  font-size:  100%;
+}
+
+
+body {
+  margin:  0;
+  padding:  0;
+  overflow: hidden;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+
+  ::-moz-selection {
+    color:#FFF;
+    text-shadow:none;
+    background-color:#000
+  }
+
+  ::selection {
+    color:#FFF;
+    text-shadow:none;
+    background-color:#000
+  }
+}
+
+
+p {
+  color: #78909C;
+  font-size: 1rem;
+}
+
+
+.o-content {
+  height:  100vh;
+  width: 70vw;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+
+.o-demo {
+  height:  100vh;
+  width: 30vw;
+  min-width:  474px;
+}
+
+
+.c-head {
+  margin:  0 5vw;
+}
+
+
+.o-logo {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+
+.c-install {
+
+}
+
+
+.c-install__code {
+  display:  inline-block;
+  background-color:  #000;
+  color:  #FFF;
+  padding:  16px;
+  font-size:  1rem;
+}
+
+
+.c-install__text {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
