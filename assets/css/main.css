@@ -14,19 +14,19 @@ body {
   display: flex;
   font-family: 'Montserrat', sans-serif;
 
-  ::-moz-selection {
-    color:#FFF;
-    text-shadow:none;
-    background-color:#000
-  }
-
-  ::selection {
-    color:#FFF;
-    text-shadow:none;
-    background-color:#000
-  }
 }
 
+::-moz-selection {
+  color:#FFF;
+  text-shadow:none;
+  background-color:#005bfb;
+}
+
+::selection {
+  color:#FFF;
+  text-shadow:none;
+  background-color:#005bfb;
+}
 
 p {
   color: #78909C;
@@ -65,7 +65,7 @@ p {
 
 
 .c-install {
-
+  margin-top:  3rem;
 }
 
 
@@ -83,4 +83,14 @@ p {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+
+.c-github {
+  margin-top:  3rem;
+}
+
+
+.c-github__button + .c-github__button {
+  margin-left:  1rem;
 }
