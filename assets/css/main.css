@@ -1,5 +1,9 @@
 @import 'https://fonts.googleapis.com/css?family=Montserrat';
 
+* {
+  box-sizing:  border-box
+}
+
 
 html {
   font-size:  100%;
@@ -40,9 +44,13 @@ a {
 }
 
 
+a:hover {
+  text-decoration:  underline;
+}
+
 .o-content {
   height:  100vh;
-  width: 70vw;
+  width: 60%;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -52,8 +60,19 @@ a {
 
 .o-demo {
   height:  100vh;
-  width: 30vw;
-  min-width:  474px;
+  width: 40%;
+  min-width:  360px;
+  border-left:  1px solid #ECF0F1;
+  overflow: auto;
+  padding: 3rem 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
 }
 
 
@@ -103,17 +122,37 @@ a {
 
 
 .o-list {
+  padding: 3rem 0;
 }
 
 
 .c-play {
-  column-count: 3;
   list-style:  none;
-}
-
-
-.c-play {
   color:  #000;
 }
 
 
+.c-play__item {
+  display:  block;
+  margin: 1rem 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor:  pointer;
+}
+
+
+.c-play__item span {
+  transition: all 200ms;
+}
+
+
+.c-play__checkbox {
+  margin-right: 1rem;
+}
+
+
+.c-play__checkbox:checked + span {
+  color:  #005bfb;
+}
