@@ -57,7 +57,7 @@ a:hover {
   height:  100vh;
   overflow: auto;
   padding: 3rem 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   right:  0;
   left: 0;
@@ -77,11 +77,13 @@ a:hover {
   display: inline-block;
   background-color: #005bfb;
   color: #FFF;
+  line-height: 1.6;
   text-transform: uppercase;
   font-weight: bold;
   padding: 8px 16px;
   text-decoration: none;
   position: absolute;
+  border-radius: 0 0 0 30px;
   right: 0;
 }
 
