@@ -80,7 +80,9 @@ a:hover {
   line-height: 1.6;
   text-transform: uppercase;
   font-weight: bold;
-  padding: 8px 16px;
+  padding: 8px 16px 8px 24px;
+  width: 110px;
+  text-align: center;
   text-decoration: none;
   position: absolute;
   border-radius: 0 0 0 30px;
