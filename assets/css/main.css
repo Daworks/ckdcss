@@ -150,6 +150,8 @@ a:hover {
 
 .o-list {
   padding: 3rem 0;
+  width: 40%;
+  margin: 0 auto;
 }
 
 
@@ -241,5 +243,7 @@ a:hover {
 
   .o-list {
     display: block;
+    margin: auto;
+    width:  auto;
   }
 }
