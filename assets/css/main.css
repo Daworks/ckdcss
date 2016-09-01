@@ -1,7 +1,7 @@
 @import 'https://fonts.googleapis.com/css?family=Montserrat';
 
 * {
-  box-sizing:  border-box
+  box-sizing:  border-box;
 }
 
 
@@ -54,21 +54,41 @@ a:hover {
 
 
 .o-demo {
-  height:  auto;
-  min-width:  360px;
-  border-left:  1px solid #ECF0F1;
+  height:  100vh;
   overflow: auto;
   padding: 3rem 0;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-align: center;
-      align-items: center;
+  position: absolute;
+  top: 0;
+  right:  0;
+  left: 0;
+  bottom: 0;
+  background-color: #FFF;
+  transform: translateX(100%);
 }
 
+@media screen and (max-width: 48em) {
+  #demo:target {
+    transform: none;
+  }
+}
+
+
+.c-demo-button {
+  display: inline-block;
+  background-color: #005bfb;
+  color: #FFF;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px 16px;
+  text-decoration: none;
+  position: absolute;
+  right: 0;
+}
+
+.o-demo .c-demo-button {
+  right: 0;
+  top: 0;
+}
 
 .c-head {
   margin:  0 5vw;
@@ -126,6 +146,9 @@ a:hover {
 
 .o-list {
   padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 
@@ -143,6 +166,7 @@ a:hover {
       -ms-user-select: none;
           user-select: none;
   cursor:  pointer;
+  min-width: 30%;
 }
 
 
@@ -171,14 +195,31 @@ a:hover {
     display: flex;
   }
 
+
   .o-content {
     height: 100vh;
     width: 60%;
   }
 
+
   .o-demo {
-    height: 100vh;
+    min-width:  360px;
     width: 40%;
+    border-left:  1px solid #ECF0F1;
+    position: relative;
+    top: auto;
+    right:  auto;
+    left: auto;
+    bottom: auto;
+    transform: none;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
   }
 
 
@@ -187,7 +228,13 @@ a:hover {
     text-align: initial;
   }
 
+
   .c-install__code {
     display:  inline-block;
+  }
+
+  .c-demo-button {
+    display:  none;
+    pointer-events: none;
   }
 }
