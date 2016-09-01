@@ -150,9 +150,6 @@ a:hover {
 
 .o-list {
   padding: 3rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 
@@ -240,5 +237,9 @@ a:hover {
   .c-demo-button {
     display:  none;
     pointer-events: none;
+  }
+
+  .o-list {
+    display: block;
   }
 }
