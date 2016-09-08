@@ -19,13 +19,13 @@ body {
 ::-moz-selection {
   color:#FFF;
   text-shadow:none;
-  background-color:#005bfb;
+  background-color:#20E276;
 }
 
 ::selection {
   color:#FFF;
   text-shadow:none;
-  background-color:#005bfb;
+  background-color:#20E276;
 }
 
 p {
@@ -35,7 +35,7 @@ p {
 
 
 a {
-  color: #005bfb;
+  color: #20E276;
   text-decoration: none;
 }
 
@@ -75,7 +75,7 @@ a:hover {
 
 .c-demo-button {
   display: inline-block;
-  background-color: #005bfb;
+  background-color: #20E276;
   color: #FFF;
   line-height: 1.6;
   text-transform: uppercase;
@@ -184,7 +184,7 @@ a:hover {
 
 
 .c-play__checkbox:checked + span {
-  color:  #005bfb;
+  color:  #20E276;
 }
 
 
