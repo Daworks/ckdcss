@@ -216,7 +216,7 @@ a:hover {
     bottom: auto;
     transform: none;
     display: -ms-flexbox;
-    padding: none;
+    padding: 0;
     display: flex;
     -ms-flex-pack: center;
         justify-content: center;
