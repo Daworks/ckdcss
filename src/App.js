@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import classNames from 'classnames/bind';
 import style from './App.scss';
 
@@ -10,7 +9,10 @@ class App extends Component {
   render() {
     return (
       <div className={ cls('App') }>
-        
+        <div className={ cls('BackgroundBar') } ></div>
+        <div className={ cls('BackgroundBar') } ></div>
+        <div className={ cls('BackgroundBar') } ></div>
+        <div className={ cls('BackgroundBar') } ></div>
       </div>
     );
   }
