@@ -1,3 +1,7 @@
+@import '../../style/settings/ambient';
+@import '../../style/settings/theme';
+@import '../../style/tools/functions';
+
 :global {
 
 .App {
@@ -23,7 +27,7 @@
     transform: translate(-40vw, -30vh);
 
     @media screen and (break(medium)) {
-      transform: none;
+      opacity: 0;
     }
   }
 
