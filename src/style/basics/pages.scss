@@ -8,13 +8,14 @@
 
 html {
   font-size: 100%;
+  background-image: linear-gradient(-45deg, $accent-alt 0%, $accent 100%);
 }
 
 
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-tap-highlight-color: color($yellow,default);
+  -webkit-tap-highlight-color: $accent;
 
   @if $font-face-name and $font-face-name != '' {
     font-family: $font-face-name, $font-family;
