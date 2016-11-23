@@ -5,24 +5,24 @@
   :root {
 
     &:after {
-    position: fixed;
-    cursor: default;
-    z-index: 999999;
-    bottom: 20px;
-    right: 20px;
-    font-weight: bold;
-    font-size: 12px;
-    padding: 7px 0;
-    text-align: center;
-    display: inline-block;
-    box-sizing: border-box;
-    padding: 15px 20px;
-    border-radius: 2px;
-    text-transform: uppercase;
-    transition: color 250ms, background-color 250ms;
-    background-color: #FFF;
-    box-shadow: 0 10px 30px rgba( #000, .2 );
-    color: #212121;
+      position: fixed;
+      cursor: default;
+      z-index: 999999;
+      bottom: 20px;
+      right: 20px;
+      font-weight: bold;
+      font-size: 12px;
+      padding: 7px 0;
+      text-align: center;
+      display: inline-block;
+      box-sizing: border-box;
+      padding: 15px 20px;
+      border-radius: 2px;
+      text-transform: uppercase;
+      transition: color 250ms, background-color 250ms;
+      background-color: #FFF;
+      box-shadow: 0 10px 30px rgba( #000, .2 );
+      color: #212121;
 
       /*
         Loop through $breakpoints and generate a random color for the label
@@ -57,10 +57,10 @@
             content: "#{ $density } ";
 
             @media ( orientation: portrait ) {
-            content: "#{ $density } portrait"; }
+            content: "#{ $density } - PORTRAIT"; }
 
             @media ( orientation: landscape ) {
-            content: "#{ $density } landscape"; }
+            content: "#{ $density } - LANDSCAPE"; }
 
             @media ( min-width: $size ) {
             content: "#{ $size-name } - #{ $density }" !important;

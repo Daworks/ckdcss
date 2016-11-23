@@ -6,28 +6,27 @@ import style from './logo.scss';
 let cx = classNames.bind(style);
 
 // Component
-let Logo = ({small,big}) => {
+let Logo = ({size}) => {
 
   let cssClass = cx({
-    Logo: true,
-    'Logo-Big': big,
-    'Logo-Small': small
+    'Logo': true,
+    'Logo-Big': (size === 'big') ? true : false,
+    'Logo-Small': (size === 'small') ? true : false
   });
 
   return (
-    <img src="/assets/images/ckdcss.svg" alt="CKD-CSS" className={cssClass} />
+    <img src="/assets/images/ckdcss.svg" draggable="false" alt="CKD-CSS" className={cssClass} />
   );
 };
 
 // Props validation
 Logo.propTypes = {
-  size: React.PropTypes.bool
+  size: React.PropTypes.string
 };
 
 // Default props
 Logo.defaultProps = {
-  small: false,
-  big: false
+  size: 'default',
 };
 
 export default Logo;

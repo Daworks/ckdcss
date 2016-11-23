@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classNames from 'classnames/bind';
-import Logo from '../../components/Logo';
+import PageContainer from '../../components/PageContainer';
+import Header from '../../components/Header';
 
 
 import style from './App.scss';
@@ -17,7 +18,9 @@ class App extends Component {
           <div className={ cls('Background-Bar') }></div>
           <div className={ cls('Background-Bar') }></div>
         </div>
-        <Logo big={true} />
+        <PageContainer>
+          <Header />
+        </PageContainer>
       </div>
     );
   }

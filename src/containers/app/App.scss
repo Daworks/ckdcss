@@ -12,11 +12,13 @@
 
 .App-Background {
   overflow: hidden;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: -1;
+  mix-blend-mode: overlay;
 }
 
 .Background-Bar {
@@ -24,7 +26,6 @@
   background-image: url('/assets/images/background.svg');
   background-repeat: no-repeat;
   background-position: center center;
-  mix-blend-mode: overlay;
   opacity: 0.15;
   height: 576px;
   width: 762px;
@@ -35,7 +36,7 @@
     transform: translate(-40vw, -30vh);
 
     @media screen and (break(extraLarge)) {
-      transform: translate(-50%, 0);
+      transform: translate(-50%, -10%);
     }
   }
 
@@ -65,7 +66,7 @@
     transform: translate(-35vw, 20vh);
 
     @media screen and (break(extraLarge)) {
-      transform: translateX(-70%);
+      transform: translate(-70%, 10%);
     }
   }
 }

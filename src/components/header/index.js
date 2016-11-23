@@ -1,28 +1,33 @@
 import React from 'react';
 import classNames from 'classnames/bind';
+import Logo from '../Logo';
 
-import style from './header.scss'
+import style from './header.scss';
 
-let cls = classNames.bind(style);
+let cx = classNames.bind(style);
 
 
 // Component
-let Header = ({text}) => {
+let Header = () => {
+
   return (
-    <div className={ cls('Header') }>
-      {`Hi ${text}`}
+    <div className={ cx('Header') }>
+      <Logo big={true} />
+      <h2 className={ cx('Header-Headline') }>
+        A tiny set of micro interactions for your checkboxes.
+      </h2>
     </div>
-  )
-}
+  );
+};
 
 // Props validation
 Header.propTypes = {
   text: React.PropTypes.string
-}
+};
 
 // Default props
 Header.defaultProps = {
   text: 'Jonny'
-}
+};
 
 export default Header;
