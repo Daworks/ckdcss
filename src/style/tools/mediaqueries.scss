@@ -1,31 +1,32 @@
 @import '../settings/ambient';
 
 @if $use-helper-mediaqueries == true {
-
   :root {
 
-    &:after {
+    &::after {
       position: fixed;
-      cursor: default;
+      font-family: -apple-system, BlinkMacSystemFont,'Arial', sans-serif;
+      user-select: none;
+      -webkit-user-select: none;
+      pointer-events: none;
       z-index: 999999;
-      bottom: 20px;
-      right: 20px;
+      bottom: 16px;
+      right: 16px;
       font-weight: bold;
-      font-size: 12px;
-      padding: 7px 0;
-      text-align: center;
-      display: inline-block;
+      font-size: 11px;
+      line-height: 1.8;
       box-sizing: border-box;
-      padding: 15px 20px;
-      border-radius: 2px;
-      text-transform: uppercase;
-      transition: color 250ms, background-color 250ms;
-      background-color: #FFF;
-      box-shadow: 0 10px 30px rgba( #000, .2 );
-      color: #212121;
+      padding: 16px 24px;
+      border-radius: 4px;
+      white-space: pre-wrap;
+      text-transform: capitalize;
+      box-shadow: 0 10px 30px rgba( #000, 0.2 );
+      -webkit-backdrop-filter: blur(2px);
+      backdrop-filter: blur(2px);
+      background-color: rgba( #FFF, 0.95 );
 
       /*
-        Loop through $breakpoints and generate a random color for the label
+      Loop through $breakpoints and generate a random text color if $enable-random-color is TRUE
       */
       @each $breakpoint in $breakpoints {
         /*
@@ -33,43 +34,50 @@
         */
         $breakpoint: nth( $breakpoint, 2 );
 
-          @media screen and ( min-width: $breakpoint ) {
-          color: hsl( random(361) - 250, 50%, 50% );
+        @media screen and ( min-width: $breakpoint ) {
+          color: hsl( random( 361 ) - 250, 50%, 50% );
         }
       }
-
     }
 
     /*
-      Extract each density value from $densities
+      Extract each $density-value value from $densities
     */
     @each $density in $densities {
 
-      $density: nth( $density, 2);
-      $dpi: unquote( "min-resolution: #{ $density }" );
+      $density-name: nth( $density, 1 );
+      $density-value: nth( $density, 2 );
+      $dpi: unquote( 'min-resolution: #{ $density-value }' );
 
+      /*
+        Extract each key and his value form the $breakpoints map
+      */
       @for $i from 1 through length( $breakpoints ) {
         $size-name: nth( nth( $breakpoints, $i ), 1 );
         $size: nth( nth( $breakpoints, $i ), 2 );
 
-        &:after {
+        &::after {
           @media screen and ( $dpi ) {
-            content: "#{ $density } ";
+            content: 'Density: #{ $density-value }';
 
             @media ( orientation: portrait ) {
-            content: "#{ $density } - PORTRAIT"; }
+              content: 'Breakpoint:   None \a Density:         #{ $density-value } (#{ $density-name }) \a Orientation:   Portrait';
+            }
 
             @media ( orientation: landscape ) {
-            content: "#{ $density } - LANDSCAPE"; }
+              content: 'Breakpoint:   None \a Density:         #{ $density-value } (#{ $density-name }) \a Orientation:   Landscape';
+            }
 
             @media ( min-width: $size ) {
-            content: "#{ $size-name } - #{ $density }" !important;
+              content: 'Breakpoint:   #{ $size-name } (#{ $size }) \a Density:         #{ $density-value } (#{ $density-name })' !important;
 
               @media ( orientation: portrait ) {
-              content: "#{ $size-name } - #{ $density } - PORTRAIT" !important; }
+                content: 'Breakpoint:   #{ $size-name } (#{ $size }) \a Density:         #{ $density-value } (#{ $density-name }) \a Orientation:   Portrait' !important;
+              }
 
               @media ( orientation: landscape ) {
-              content: "#{ $size-name } - #{ $density } - LANDSCAPE" !important; }
+                content: 'Breakpoint:   #{ $size-name } (#{ $size }) \a Density:         #{ $density-value } (#{ $density-name }) \a Orientation:   Landscape' !important;
+              }
             }
           }
         }

@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import Logo from '../Logo';
+import Logo from 'components/Logo';
 
 import style from './header.scss';
 

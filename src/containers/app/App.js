@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import classNames from 'classnames/bind';
-import PageContainer from '../../components/PageContainer';
-import Header from '../../components/Header';
+import PageContainer from 'components/PageContainer';
+import Header from 'components/Header';
 
 
 import style from './App.scss';

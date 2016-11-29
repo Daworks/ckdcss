@@ -9,25 +9,3 @@ $font-family: "Segoe UI", "Arial", sans-serif;
 // Layout settings
 
 $base-spacing    : 8px; // 8px
-
-
-// Debug flags
-
-$use-helper-mediaqueries: true;
-
-
-// Responsive settings (30em > 480px, 48em > 768px, 60em > 960px, 80em > 1280px, 100em > 1600px)
-$breakpoints: (
-  extraSmall : 30em,
-  small      : 48em,
-  medium     : 60em,
-  large      : 80em,
-  extraLarge : 100em
-);
-
-$densities: (
-  1x  : '96dpi',
-  15x : '144dpi',
-  2x  : '192dpi',
-  3x  : '288dpi'
-);
