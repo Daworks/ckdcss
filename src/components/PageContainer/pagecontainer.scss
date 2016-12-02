@@ -1,15 +1,23 @@
+@import '~help-media-queries/src/helpers.scss';
 @import '../../style/settings/ambient';
 @import '../../style/settings/theme';
 @import '../../style/tools/functions';
 
-.PageContainer {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 70vw;
-  padding: 4em;
-
-  &--Full {
+:global {
+  .PageContainer {
     width: 100%;
-    margin: auto;
+    padding: 2em;
+
+    @media screen and (break(small)) {
+      margin: 0 auto;
+      max-width: 70vw;
+      padding: 4em;
+    }
+
+    &--Full {
+      width: 100%;
+      margin: auto;
+      max-width: 100%;
+    }
   }
 }

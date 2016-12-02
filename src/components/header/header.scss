@@ -1,3 +1,4 @@
+@import '~help-media-queries/src/helpers.scss';
 @import '../../style/tools/gfont';
 
 
@@ -14,4 +15,10 @@
   letter-spacing: 1px;
   text-align: center;
   margin-top: 32px;
+  transition: font-size 200ms;
+  font-size: 1em;
+
+  @media screen and (break(small)) {
+    font-size: 1.5em;
+  }
 }
